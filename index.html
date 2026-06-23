@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stellar - Web3 Portal</title>
+  <!-- Google Fonts: Outfit (headings) & Space Grotesk (body/monospaced elements) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Lucide Icons for premium visual glyphs -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Animated Ambient Glowing Orbs -->
+  <div class="ambient-orbs-container">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="app-container">
+    <!-- Navbar / Header -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-logo-wrapper">
+          <i data-lucide="blocks" class="brand-icon"></i>
+        </div>
+        <span class="brand-name">Stellar</span>
+      </div>
+      <div class="header-badge">
+        <span class="network-dot pulse"></span>
+        <span class="badge-text">Web3 Active</span>
+      </div>
+    </header>
+
+    <!-- Main Portal Card -->
+    <main class="main-content">
+      <div class="portal-card">
+        <!-- Visual Refraction Glow Line -->
+        <div class="card-glow-line"></div>
+
+        <div class="card-body">
+          <!-- Animated Interactive Logo Wrapper -->
+          <div class="interactive-logo-container">
+            <div class="logo-morph">
+              <i data-lucide="wallet-2" class="portal-logo-icon"></i>
+              <div class="morph-ring ring-1"></div>
+              <div class="morph-ring ring-2"></div>
+            </div>
+          </div>
+
+          <!-- Titles -->
+          <h1 class="portal-title">Explore Web3</h1>
+          <p class="portal-subtitle">Connect your decentralized MetaMask wallet to tap into the next generation of
+            financial autonomy and secure Web3 interactions.</p>
+
+          <!-- Dynamic Status Messages / Alerts -->
+          <div id="statusMessage" class="status-box hidden">
+            <i data-lucide="info" class="status-box-icon"></i>
+            <span class="message-text"></span>
+          </div>
+
+          <!-- Connection States -->
+          <div class="connection-module">
+
+            <!-- State 1: Disconnected -->
+            <div id="disconnectedState" class="state-view active">
+              <button id="connectBtn" class="btn btn-connect">
+                <img src="metamask.svg" class="metamask-fox-logo" alt="MetaMask">
+                <span>Connect Wallet</span>
+                <i data-lucide="chevron-right" class="btn-arrow-icon"></i>
+              </button>
+              <p class="connection-helper">
+                <i data-lucide="shield-check" class="helper-shield-icon"></i>
+                Secure cryptographic signature authentication
+              </p>
+            </div>
+
+            <!-- State 2: Connected -->
+            <div id="connectedState" class="state-view hidden">
+              <div class="wallet-dashboard">
+
+                <!-- Balance Display Card -->
+                <div class="balance-card">
+                  <span class="balance-title">Available Balance</span>
+                  <div class="balance-amount-wrapper">
+                    <span id="walletBalance" class="balance-value">0.0000 ETH</span>
+                  </div>
+                </div>
+
+                <!-- Details Panel -->
+                <div class="details-panel">
+
+                  <div class="detail-item">
+                    <div class="detail-header">
+                      <i data-lucide="user" class="detail-icon"></i>
+                      <span>Wallet Address</span>
+                    </div>
+                    <div class="address-wrapper">
+                      <span id="walletAddress" class="address-text">0x00...0000</span>
+                      <button id="copyBtn" class="copy-action-btn" title="Copy Wallet Address">
+                        <i data-lucide="copy" class="copy-svg-icon"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="detail-item">
+                    <div class="detail-header">
+                      <i data-lucide="globe-2" class="detail-icon"></i>
+                      <span>Connected Network</span>
+                    </div>
+                    <div class="network-status-badge">
+                      <span class="badge-indicator-dot"></span>
+                      <span id="networkName">Mainnet</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Disconnect Action Group -->
+                <div class="disconnect-wrapper">
+                  <button id="disconnectBtn" class="btn btn-disconnect">
+                    <i data-lucide="power" class="disconnect-icon"></i>
+                    <span>Disconnect Wallet</span>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Feature Cards Grid -->
+          <div class="features-summary-grid">
+            <div class="feature-item-card">
+              <i data-lucide="shield-alert" class="feature-item-icon"></i>
+              <h4>Secure Key</h4>
+              <p>Self-custodial access directly through your browser extension.</p>
+            </div>
+            <div class="feature-item-card">
+              <i data-lucide="activity" class="feature-item-icon"></i>
+              <h4>Live Balance</h4>
+              <p>Instantly fetch and display real-time network holdings.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>&copy; 2026 Aethera. Designed for Web3 developers and beginners alike.</p>
+    </footer>
+  </div>
+
+  <!-- App Core Logic -->
+  <script src="app.js"></script>
+  <script>
+    // Load and render all Lucide SVGs
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
