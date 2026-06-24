@@ -15,9 +15,9 @@ Stellar is a modern Web3 portal that enables users to securely connect their Met
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
+- HTML
+- CSS
+- JavaScript 
 - Web3.js / Ethereum APIs
 - MetaMask Wallet Integration
 
